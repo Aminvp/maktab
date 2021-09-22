@@ -1,13 +1,12 @@
 def only_even_parameters(func):
-    def wrapper(*args):
+    def wrapper(a, b):
         try:
-            for x in args:
-                if x % 2 == 0:
-                    return func(*args)
+            if a % 2 == 0 and b % 2 == 0 :
+                return func(a, b)
+            else:
+                return "please only use even numbers!" 
         except Exception as ex:    
             return ex  
-        else:
-            return "please only use even numbers!" 
     return wrapper
 
 
@@ -20,4 +19,7 @@ def myFunction(a, b):
 print(myFunction(5, 5))
 
 print(myFunction(4, 4)) 
+
+print(myFunction('a', 'b'))
     
+print(myFunction(4, 5))

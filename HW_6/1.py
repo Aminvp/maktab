@@ -12,7 +12,7 @@ print('*' * 50)
 for file in files :
     if '.' in file :
         print(file)
-        with open(adress+'\\'+file , 'r') as reader :
+        with open(adress+'//'+file , 'r') as reader :
             print(reader.readline())
 
             entry = input()
