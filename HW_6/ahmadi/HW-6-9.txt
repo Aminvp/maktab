@@ -1,0 +1,13 @@
+def mutiple_of_two(n):
+    i = 1
+    while True:
+
+        if i%n==0:
+            yield i
+        i+=1
+
+my_gen=mutiple_of_two(13)
+print(next(my_gen))
+print(next(my_gen))
+print(next(my_gen))
+

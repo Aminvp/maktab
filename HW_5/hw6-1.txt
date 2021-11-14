@@ -1,0 +1,31 @@
+import csv
+
+with open('Book1.csv','r') as input_csvfile:
+        csv_reader=csv.reader(input_csvfile,delimiter=',')
+        output_file=[]
+        for row in csv_reader:
+            output_file.append([(row[0])]+[row[2]]+[row[1]])
+        output_csvfile=[]
+        with open('output_csvfile.csv', 'w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerows(output_file)
+        with open('output_csvfile.csv', 'r') as csvinput:
+            with open('outputnew_csvfile.csv', 'w') as csvoutput:
+                writer = csv.writer(csvoutput)
+                for row in csv.reader(csvinput):
+                    writer.writerow(row + [(sum(map(int, row[0:])))])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

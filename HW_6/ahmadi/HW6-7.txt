@@ -1,0 +1,14 @@
+def only_even_parameters(myfunc):
+    def wrapper(a,b):
+        if(a%2 !=0 or b%2 !=0) :
+            raise Exception ("please only use even number")
+        else:
+          valuefinal=myfunc(a,b)
+        return valuefinal
+    return wrapper
+
+@only_even_parameters
+def myfunction(a,b):
+    return a+b
+
+print(myfunction(2,7))

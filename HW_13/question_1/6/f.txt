@@ -1,0 +1,12 @@
+select max(rental_rate) as maximum from film;
+select min(rental_rate) as minimum from film;
+select sum(rental_rate) as total from film;
+select avg(rental_rate) as average from film;
+
+or
+
+select max(rental_duration) as maximum,
+min(rental_duration) as minimum,
+avg(rental_duration) as average,
+sum(rental_duration) as total
+from film;

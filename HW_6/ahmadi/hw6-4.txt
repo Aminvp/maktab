@@ -1,0 +1,4 @@
+List = ['Jane', 'Lee', 'Will', 'Brie']
+
+fun_positive=list(map(lambda  lst :'hello '+lst,List))
+print(fun_positive)

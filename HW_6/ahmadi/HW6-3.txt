@@ -1,0 +1,5 @@
+List = [ -1000, 500, -600, 700, 5000, -90000, -175000]
+fun_positive=list(map(lambda  lst :abs(lst),List))
+lstnew=list(map(lambda lst : abs(lst),filter(lambda x : (x<0),List)))
+print(fun_positive)
+print(lstnew)

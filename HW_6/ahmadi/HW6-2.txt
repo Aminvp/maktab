@@ -1,0 +1,3 @@
+List = [ 1000, 500, 600, 700, 5000, 90000, 175000]
+lstnew2=list(map(lambda lst : lst+2000,filter(lambda x : (x<8000),List)))
+print(lstnew2)

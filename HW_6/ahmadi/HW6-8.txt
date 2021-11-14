@@ -1,0 +1,11 @@
+def only_even_parameters(myfunc):
+    def wrapper(a,b):
+        valuefinal=myfunc(a,b)*2
+        return valuefinal
+    return wrapper
+
+@only_even_parameters
+def myfunction(a,b):
+    return a+b
+
+print(myfunction(2,7))

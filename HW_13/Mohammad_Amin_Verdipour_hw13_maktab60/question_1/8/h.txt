@@ -1,0 +1,6 @@
+select CONCAT(first_name, ' ' ,last_name) as fullname, address, address.city_id, city, country
+from customer
+inner join address on customer.address_id = address.address_id
+inner join city on address.city_id = city.city_id
+inner join country on city.country_id = country.country_id
+order by country asc;

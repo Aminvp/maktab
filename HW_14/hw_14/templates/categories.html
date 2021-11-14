@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Category</title>
+</head>
+<body>
+
+    {% for category in categories %}
+        <h3>{{ category.name }}</h3>
+        <p>{{ category.slug }}</p>
+        <hr>
+    {% endfor %}
+
+</body>
+</html>
