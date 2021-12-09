@@ -1,0 +1,4 @@
+ avg=Product.objects.aggregate(Avg('price'))
+ Product.objects.filter(price__gt=avg['price__avg'])
+
+

@@ -1,0 +1,7 @@
+user1 = Customer.objects.first()
+>>> d  = user1.orders_customer.count()
+
+>>> for user in Customer.objects.all():
+...     if(user.orders_customer.count() >= d):
+...             max = user.orders_customer.count()
+

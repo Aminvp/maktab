@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="card">
+        {% for category in categories %}
+            <a href="{% url 'blog:detail_category' category.id %}" class="card-body">{{ category.title }}</a>
+        {% endfor %}
+    </div>
+{% endblock %}

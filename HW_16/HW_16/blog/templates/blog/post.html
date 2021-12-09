@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h3>{{ post.title }}</h3>
+  <small>{{ post.created }}</small><hr/>
+  <p>{{ post.body }}</p>
+  {% for com in comment %}
+    <h5>{{ com.title }}</h5>
+  {% endfor %}
+{% endblock %}

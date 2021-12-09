@@ -1,0 +1,3 @@
+for x in Order.objects.filter(created__week_day=2):
+...     x.customer.full_name
+

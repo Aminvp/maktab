@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block custom_tags %}
+  <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+  {% if request.user.is_authenticated and request.user.id == post.user.id %}
+  <a href="{% url 'blog:post_delete' post.user.id post.id %}">Delete Post</a> |
+  <a href="{% url 'blog:post_edit' post.user.id post.id %}">Edit Post</a>
+  {% endif %}
+  <h3>{{ post.title }}</h3>
+  <img src="{{ post.image.url }}" alt="">
+  <h4>{{ post.user }} | {{ post.created|date }}</h4>
+  <small>{{ post.created|timesince }}</small><hr/>
+  <p>{{ post.body|safe }}</p>
+  {% for com in comment %}
+    <h5>{{ com.title }}</h5>
+  {% endfor %}
+{% endblock %}

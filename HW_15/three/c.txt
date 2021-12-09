@@ -1,0 +1,2 @@
+CartItem.objects.order_by('-quantity')
+

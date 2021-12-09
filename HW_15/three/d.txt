@@ -1,0 +1,5 @@
+max = 0
+nm = 'ahmad'
+for x in Category.objects.all():
+...     if (x.products.count() >= max ):
+...             nm = x.name

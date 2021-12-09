@@ -1,0 +1,13 @@
+نوع دوم وراثت مدل که توسط جنگو پشتیبانی می شود زمانی است که هر مدل در سلسله مراتب به تنهایی یک مدل باشد.هر مدل مربوط به جدول پایگاه داده خود است و می تواند به صورت جداگانه پرس و جو و ایجاد شود.رابطه وراثت پیوندهایی را بین مدل کودک و هر یک از والدینش معرفی می کند.
+from django.db import models
+
+class Place(models.Model):
+    name = models.CharField(max_length=50)
+    address = models.CharField(max_length=80)
+
+class Restaurant(Place):
+    serves_hot_dogs = models.BooleanField(default=False)
+    serves_pizza = models.BooleanField(default=False)
+تمامی فیلدهای place در restaurant نیز وجود خواهد داشت.اگرچه داده ها در یک جدول پایگاه داده متفاوت قرار می گیرند.
+
+
